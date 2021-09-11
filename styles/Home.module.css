@@ -1,11 +1,10 @@
-.bodycContainer {
+.bodyContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   font-family: "Raleway", sans-serif;
   overflow: hidden;
+
+
 
 }
 
@@ -20,15 +19,15 @@
 
 }
 
-.heroTitle{
-  color: #124265;
-  text-align: center;
+/* .heroTitle{
 
-}
+
+} */
 
 .profileImage{
   width: 200px;
   height: 200px;
+
   border-radius: 100%;
   background: url("../public/RawaAref.jpeg") top right;
   background-size: cover;
@@ -45,6 +44,8 @@
   margin: 50px auto 50px auto;
   background-color: #f3f9fd;
 
+
+
 }
 
 .techStack:hover {
@@ -60,7 +61,31 @@
 
 
 
+.heroTitle {
+  color: #124265;
+  text-align: center;
+  font-family: "Raleway", sans-serif;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid #124265; /* The typwriter cursor */
+  white-space:nowrap; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .1em; /* Adjust as needed */
+  animation: 
+    typing 4s steps(40, end),
+    blink-caret .75s step-end infinite
+}
 
+/* The typing effect */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #124265 }
+}
 
 /*--------------------------------------------------------------
 # Sections General
@@ -74,6 +99,14 @@
 .profileImage{
   margin-top:80px
 }
+
+.heroTitle {
+
+  white-space:normal; 
+
+}
+
+
 }
 
 
@@ -87,3 +120,8 @@
     margin-top:80px
   }
   }
+
+
+
+
+
