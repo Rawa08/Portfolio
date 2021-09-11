@@ -1,0 +1,18 @@
+.customNavLink{
+    color: #16507b !important;
+    font-weight: bold;
+}
+
+.customNavLink:hover{
+    color: #0d6efd !important;
+}
+
+.nav{
+transition: all 0.5s !important;
+background: #fff !important;
+z-index: 997 !important;
+padding: 15px 0 !important;
+border-bottom: 1.5px solid #e6f2fb !important;
+
+
+}
