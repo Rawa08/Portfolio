@@ -7,7 +7,8 @@ import ProjectCard from '../components/projects/ProjectCard'
 
 
 export default function Home() {
-  const projectDataExampel = {
+  const projectDataExampel = [{
+    id:1,
     title:'My Fragrance',
     devType:"Fullstack development",
     description:'Ecommerce app',
@@ -16,11 +17,26 @@ export default function Home() {
       src:'https://github.com/Rawa08/FullstackWithDjango/raw/master/wireframes_mockups/desktop.png',
       alt:'alt text',
     },{src:'https://github.com/Rawa08/FullstackWithDjango/raw/master/wireframes_mockups/ipad.png',alt:'ipad viwe'}],
-    link:'',
+    link:'https://fullstackwithdjango.herokuapp.com/',
     github:'https://github.com/Rawa08/FullstackWithDjango',
     appLink:'homeLink'
   
-  }
+  },
+
+  {id:2,
+    title:'Elder Care Supreme',
+    devType:"Team Collaboration, Hackathon 2020",
+    description:'Elder Care Supreme allows the elderly and aiders to connect, communicate, and collaborate on elderly daily tasks.',
+    tech:['Html','CSS',' Materialize','Python 3','Django 3','Javascript', 'Postgress'],
+    images :[{
+      src:'https://github.com/NaoiseGaffney/ElderCareSupreme/blob/production/eldercaresupreme/static/images/ElderCareSupremeLogo.png?raw=true',
+      alt:'alt text',
+    }],
+    link:'https://elder-care-supreme.herokuapp.com/',
+    github:'https://github.com/Rawa08/Team-collaboration-ElderCareSupreme-Hackathon-Challenge-2020',
+    appLink:'homeLink'
+  
+  }]
 
   return (
     <div className={styles.bodyContainer}>
@@ -78,7 +94,8 @@ export default function Home() {
       <div className={styles.myProject}>
       <h2>MY PROJECTS</h2>
       <Row className="d-flex justify-content-center align-items-center">
-        <Col lg={4} className="justify-content-center d-flex"><ProjectCard projectData={projectDataExampel}/></Col>
+        {projectDataExampel.map(project => (<Col key={project.id} lg={4} className="justify-content-center d-flex"><ProjectCard projectData={project}/></Col>))}
+        
     
       
         <Col lg={4} className="text-center"><h6>My Fragrance</h6></Col>

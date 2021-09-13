@@ -1,7 +1,7 @@
 import React from 'react'
 import { Card, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
 import BootstrapCarousel from './BootstrapCarousel';
-
+import style from '../../styles/Home.module.css'
 
 const ProjectCard = ({projectData}) => {
 
@@ -18,7 +18,7 @@ const ProjectCard = ({projectData}) => {
     <Card.Title>{title}</Card.Title>
     <Card.Subtitle className="mb-2 text-muted">{devType}</Card.Subtitle>
     <Card.Text>
-      {description}
+      <p className={style.ellipsis}>{description}</p>
       <ul>
         {tech.map( techItem => (<li>{techItem}</li>))}
       </ul>
