@@ -1,11 +1,26 @@
-import { useState } from 'react'
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import { useState } from 'react';
+import Head from 'next/head';
+import styles from '../styles/Home.module.css';
 import { Col, Row } from 'react-bootstrap';
-import Image from 'next/image'
+import Image from 'next/image';
+import ProjectCard from '../components/projects/ProjectCard'
 
 
 export default function Home() {
+  const projectDataExampel = {
+    title:'My Fragrance',
+    devType:"Fullstack development",
+    description:'Ecommerce app',
+    tech:['Python 3','Django 3','Javascript', 'Postgress' ],
+    images :[{
+      src:'https://github.com/Rawa08/FullstackWithDjango/raw/master/wireframes_mockups/desktop.png',
+      alt:'alt text',
+    },{src:'https://github.com/Rawa08/FullstackWithDjango/raw/master/wireframes_mockups/ipad.png',alt:'ipad viwe'}],
+    link:'',
+    github:'https://github.com/Rawa08/FullstackWithDjango',
+    appLink:'homeLink'
+  
+  }
 
   return (
     <div className={styles.bodyContainer}>
@@ -63,8 +78,18 @@ export default function Home() {
       <div className={styles.myProject}>
       <h2>MY PROJECTS</h2>
       <Row className="d-flex justify-content-center align-items-center">
-        <Col className="text-center">test</Col>
+        <Col lg={4} className="justify-content-center d-flex"><ProjectCard projectData={projectDataExampel}/></Col>
+    
+      
+        <Col lg={4} className="text-center"><h6>My Fragrance</h6></Col>
+        <Col lg={4} className="text-center"><h6>Trade Jack F-B</h6></Col>
+        <Col lg={4} className="text-center"><h6>Elder Care Supreme</h6></Col>
+        <Col lg={4} className="text-center"><h6>Digital Tools</h6></Col>
+        <Col lg={4} className="text-center"><h6>Customer Ledger F-B</h6></Col>
+ 
+        
       </Row>
+
       </div>
     </div>
   )
