@@ -53,10 +53,10 @@ export default function Home() {
           <Col  lg={2} md={4} xs={4} className="text-center"><Image src={require('../public/back/other/Chaijs.webp')} width={100} height={75} className={styles.techLogo} alt="Chai test library logo" /> </Col>
           <Col  lg={2} md={4} xs={4} className="text-center"><Image src={require('../public/back/other/Mocha.webp')} width={100} height={75} className={styles.techLogo} alt="Mocha JavaScript test framework logo"/> </Col>
           <Col  lg={2} md={4} xs={4} className="text-center"><Image src={require('../public/back/other/Jasmine.webp')} width={100} height={75} className={styles.techLogo} alt="JasminJs JavaScript test framework logo" /> </Col>
-          <Col  lg={2} md={4} xs={4} className="text-center"><Image src={require('../public/back/other/TravisCi.webp')} width={100} height={75} className={styles.techLogo} alt="Travis CI logo" /> </Col>
+          <Col  lg={2} md={4} xs={4} className="text-center"><Image src={require('../public/back/other/Travis.webp')} width={100} height={75} className={styles.techLogo} alt="Travis CI logo" /> </Col>
    
           <Col  lg={2} md={4} xs={4} className="text-center"><Image src={require('../public/back/other/Postgress.webp')} width={100} height={75} className={styles.techLogo} alt="postgress database system logo" /> </Col>
-          <Col  lg={2} md={4} xs={4} className="text-center"><Image src={require('../public/back/other/MongoDB.webp')} width={100} height={75} className={styles.techLogo} alt="Mysql database system logo" /> </Col>
+          <Col  lg={2} md={4} xs={4} className="text-center"><Image src={require('../public/back/other/Mongodb.webp')} width={100} height={75} className={styles.techLogo} alt="Mysql database system logo" /> </Col>
           <Col  lg={2} md={4} xs={4} className="text-center"><Image src={require('../public/back/other/Mysql.webp')} width={100} height={75} className={styles.techLogo} alt="mongodb document based databaselogo" /> </Col>
         </Row>
       </div>
