@@ -4,10 +4,10 @@ const BootstrapCarousel = ({images}) => {
 
 
     return (
-<Carousel variant="top" className="mt-2">
+<Carousel variant="top">
     {images.map(img => (
-    
-        <Carousel.Item>
+      
+        <Carousel.Item key={img.src}>
           
         <img
           className="d-block w-100"

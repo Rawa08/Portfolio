@@ -1,42 +1,14 @@
-import { useState } from 'react';
+
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import { Col, Row } from 'react-bootstrap';
 import Image from 'next/image';
 import ProjectCard from '../components/projects/ProjectCard'
-
+import {projectDataExampel} from '../data.js';
+import Link from 'next/link'
 
 export default function Home() {
-  const projectDataExampel = [{
-    id:1,
-    title:'My Fragrance',
-    devType:"Fullstack development",
-    description:'Ecommerce app',
-    tech:['Python 3','Django 3','Javascript', 'Postgress' ],
-    images :[{
-      src:'https://github.com/Rawa08/FullstackWithDjango/raw/master/wireframes_mockups/desktop.png',
-      alt:'alt text',
-    },{src:'https://github.com/Rawa08/FullstackWithDjango/raw/master/wireframes_mockups/ipad.png',alt:'ipad viwe'}],
-    link:'https://fullstackwithdjango.herokuapp.com/',
-    github:'https://github.com/Rawa08/FullstackWithDjango',
-    appLink:'homeLink'
-  
-  },
 
-  {id:2,
-    title:'Elder Care Supreme',
-    devType:"Team Collaboration, Hackathon 2020",
-    description:'Elder Care Supreme allows the elderly and aiders to connect, communicate, and collaborate on elderly daily tasks.',
-    tech:['Html','CSS',' Materialize','Python 3','Django 3','Javascript', 'Postgress'],
-    images :[{
-      src:'https://github.com/NaoiseGaffney/ElderCareSupreme/blob/production/eldercaresupreme/static/images/ElderCareSupremeLogo.png?raw=true',
-      alt:'alt text',
-    }],
-    link:'https://elder-care-supreme.herokuapp.com/',
-    github:'https://github.com/Rawa08/Team-collaboration-ElderCareSupreme-Hackathon-Challenge-2020',
-    appLink:'homeLink'
-  
-  }]
 
   return (
     <div className={styles.bodyContainer}>
@@ -96,18 +68,37 @@ export default function Home() {
       <Row className="d-flex justify-content-center align-items-center">
         {projectDataExampel.map(project => (<Col key={project.id} lg={4} className="justify-content-center d-flex"><ProjectCard projectData={project}/></Col>))}
         
-    
-      
-        <Col lg={4} className="text-center"><h6>My Fragrance</h6></Col>
-        <Col lg={4} className="text-center"><h6>Trade Jack F-B</h6></Col>
-        <Col lg={4} className="text-center"><h6>Elder Care Supreme</h6></Col>
-        <Col lg={4} className="text-center"><h6>Digital Tools</h6></Col>
-        <Col lg={4} className="text-center"><h6>Customer Ledger F-B</h6></Col>
- 
-        
       </Row>
-
       </div>
+<Row>
+      <div className={styles.techStack}>
+        <h2>About Me</h2>
+        
+        <p className="text-center">I am a former account manager who acquired a strong interest in software development through hobby coding.
+        <br /> I enjoy communicating new technologies and technical concepts with my fellow team members.
+        <br />I am passionate about human interactions with digitized services...<Link href="/about">read more</Link> 
+</p>
+        
+        
+        
+        </div>
+
+        </Row>
+
+
+
+         <footer className={styles.footer}>
+        <a
+          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          
+          <span className={styles.logo}>
+          My  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png?raw=true" alt="Github Logo" width={72} height={16} />
+          </span>
+        </a>
+      </footer>
     </div>
   )
 }
