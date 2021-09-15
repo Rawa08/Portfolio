@@ -1,12 +1,12 @@
 import { Carousel } from 'react-bootstrap';
 
 const BootstrapCarousel = ({images}) => {
-
+  
 
     return (
 <Carousel variant="top">
     {images.map(img => (
-      
+        
         <Carousel.Item key={img.src}>
           
         <img
