@@ -39,7 +39,7 @@ export default function Home() {
 
           <Col lg={2} md={4} xs={4} className="text-center"> <Image src={require('../public/front/next.webp')} width={75} height={100} className={styles.techLogo} alt="NEXT JS logo" /></Col>
 
-          <Col lg={2} md={4} xs={4} className="text-center" className="text-center"><Image src={require('../public/front/bootstrap.webp')} width={75} height={100} className={styles.techLogo} alt="bootstrap logo" /> </Col>
+          <Col lg={2} md={4} xs={4} className="text-center" ><Image src={require('../public/front/bootstrap.webp')} width={75} height={100} className={styles.techLogo} alt="bootstrap logo" /> </Col>
  
           <Col lg={2} md={4} xs={4} className="text-center"><Image  src={require('../public/back/node.webp')} width={100} height={75}  className={styles.techLogo} alt="NodeJs logo" /> </Col>
           <Col lg={2} md={4} xs={4} className="text-center"> <Image src={require('../public/back/express.webp')} width={100} height={75} className={styles.techLogo} alt="expressJs logo" /> </Col>
