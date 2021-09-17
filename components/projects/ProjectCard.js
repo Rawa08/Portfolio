@@ -11,7 +11,7 @@ const ProjectCard = ({projectData}) => {
 
     return (
       
-            <Card style={{ width: '25rem'}} className="p-2 mt-4" >
+            <Card style={{ width: '25rem'}} className="mt-4" >
            
            <BootstrapCarousel images={images}/>
   <Card.Body>

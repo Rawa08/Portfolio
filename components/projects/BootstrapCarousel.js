@@ -5,7 +5,7 @@ import Image from 'next/image'
 const BootstrapCarousel = ({images}) => {
 
     return (
-<Carousel variant="top">
+<Carousel variant="dark" className="p-2">
     {images.map(img => (
         
         <Carousel.Item key={img.fields.title}>
