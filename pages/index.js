@@ -28,6 +28,8 @@ export const getStaticProps = async () => {
 
 
 export default function Home({projects, experties}) {
+
+  
   experties.map(item => {
     if (typeof item.fields.image !== 'undefined'){
     return item.imageLink='https:' + item.fields.image.fields.file.url}
@@ -71,7 +73,7 @@ export default function Home({projects, experties}) {
       <div className={styles.myProject}>
       <h2>MY PROJECTS</h2>
       <Row className="d-flex justify-content-center align-items-center">
-        {projectDataExampel.map(project => (<Col key={project.id} lg={4} className="justify-content-center d-flex"><ProjectCard projectData={project}/></Col>))}
+        {projects.map(project => (<Col key={project.sys.id} lg={4} className="justify-content-center d-flex"><ProjectCard projectData={project}/></Col>))}
         
       </Row>
       </div>
@@ -93,16 +95,7 @@ export default function Home({projects, experties}) {
 
 
          <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          
-          <span className={styles.logo}>
-          My  <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Logo.png?raw=true" alt="Github Logo" width={72} height={16} />
-          </span>
-        </a>
+<p>My Footer</p>
       </footer>
     </div>
   )

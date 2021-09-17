@@ -5,11 +5,11 @@ export const projectDataExampel = [{
     title:'My Fragrance',
     devType:"Fullstack development",
     description:'Ecommerce app',
-    tech:['Python 3','Django 3','Javascript', 'Postgress' ],
+    tech:["Python 3","Django 3","Javascript", "Postgress" ],
     images :[{
-      src:'https://github.com/Rawa08/FullstackWithDjango/raw/master/wireframes_mockups/desktop.png',
+      src:'https://images.ctfassets.net/9epw4a4fl2u6/43abWmMmAvr4BJhNEUhrJJ/cea88ea33a0a93573a9356dd689203c1/400x300.png',
       alt:'alt text',
-    },{src:'https://github.com/Rawa08/FullstackWithDjango/raw/master/wireframes_mockups/ipad.png',alt:'ipad viwe'}],
+    }],
     link:'https://fullstackwithdjango.herokuapp.com/',
     github:'https://github.com/Rawa08/FullstackWithDjango',
     appLink:'homeLink'
