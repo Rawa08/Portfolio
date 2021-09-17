@@ -22,7 +22,8 @@ export const getStaticProps = async () => {
     props:{
       projects: projectData.items,
       experties: expertiestData.items
-    }
+    },
+    revalidate: 10
   }
 }
 
