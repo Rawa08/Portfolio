@@ -1,8 +1,28 @@
+.customNavLink{
+  color: #16507b !important;
+  font-weight: bold;
+}
+
+.customNavLink:hover{
+  color: #0d6efd !important;
+  
+}
+
+.nav{
+transition: all 0.5s !important;
+background-color: rgba(243, 249, 253, .7) !important;
+z-index: 997 !important;
+padding: 15px 0 !important;
+border-bottom: 1.5px solid #e6f2fb !important;
+
+}
+
 .bodyContainer {
   display: flex;
   flex-direction: column;
   font-family: "Raleway", sans-serif;
   overflow: hidden;
+
 }
 
 .hero {
@@ -12,6 +32,7 @@
   display: flex;
   flex-direction: row;
   overflow: hidden;
+  
 }
 
 .profileImage {
@@ -20,6 +41,7 @@
   border-radius: 100%;
   background: url("../public/RawaAref.jpeg") top right;
   background-size: cover;
+
 }
 
 .techStack {
@@ -28,10 +50,11 @@
   width: 100%;
   margin: 50px auto 50px auto;
   background-color: #f3f9fd;
+
 }
 
 .techStack:hover {
-  box-shadow: 0px 0px 1px 1px #124265;
+border: #124265 solid 1px;
 }
 
 .techStack h2,
@@ -41,68 +64,14 @@
   color: #124265;
   font-family: "Raleway", sans-serif;
   text-shadow: 1px 1px #124265;
+
 }
 
-.heroTitle {
-  color: #124265;
-  text-align: center;
-  font-family: "Raleway", sans-serif;
-  overflow: hidden; /* Ensures the content is not revealed until the animation */
-  border-right: 0.15em solid #124265; /* The typwriter cursor */
-  white-space: nowrap; /* Keeps the content on a single line */
-  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-  letter-spacing: 0.15em; /* Adjust as needed */
-  animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
-}
 
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: #124265;
-  }
-}
-
-@media only screen and (max-width: 992px) {
-  .hero {
-    flex-direction: column;
-    margin-top: 0;
-    height: 55vh;
-  }
-  .profileImage {
-    margin-top: 80px;
-  }
-
-  .heroTitle {
-    white-space: normal;
-  }
-}
-
-@media only screen and (max-width: 360px) {
-  .hero {
-    flex-direction: column;
-    margin-top: 0;
-    height: 65vh;
-  }
-  .profileImage {
-    margin-top: 80px;
-  }
-}
 
 .ellipsis{
+  
   white-space: nowrap;
   overflow: hidden;
 text-overflow: ellipsis;}
@@ -119,19 +88,90 @@ text-overflow: ellipsis;}
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+  
 }
 
 
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+@media only screen and (min-width: 992px) {
+  .heroTitle {
+    color: #124265;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: 0.15em solid #124265; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: 0.15em; /* Adjust as needed */
+    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
+  }
+  
+  /* The typing effect */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
+  /* The typewriter cursor effect */
+  @keyframes blink-caret {
+    from,
+    to {
+      border-color: transparent;
+    }
+    50% {
+      border-color: #124265;
+    }
+  }
+  
+}
+
+
+
+
+@media only screen and (max-width: 992px) {
+  .hero {
+    flex-direction: column;
+    margin-top: 0;
+    height: 55vh;
+  }
+  .profileImage {
+    margin-top: 80px;
+  }
+
+  .heroTitle {
+    color: #124265;
+    text-align: center;
+    font-family: "Raleway", sans-serif;
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    white-space:normal;
+    font-size: 30px;
+    
+
+    }
+
+
+}
+@media only screen and (max-width: 380px) {
+  .hero {
+
+    height: 65vh;
+  }
+
+
+}
+
+@media only screen and (max-width: 320px) {
+  .hero {
+    flex-direction: column;
+    margin-top:0;
+    height: 85vh;
+  }
+  .profileImage {
+    margin-top: 80px;
+  }
 
 }

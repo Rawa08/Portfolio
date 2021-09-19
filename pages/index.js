@@ -4,7 +4,6 @@ import styles from '../styles/Home.module.css';
 import { Col, Row } from 'react-bootstrap';
 import Image from 'next/image';
 import ProjectCard from '../components/projects/ProjectCard'
-import {projectDataExampel} from '../data.js';
 import Link from 'next/link'
 import { createClient } from 'contentful';
 
@@ -51,7 +50,7 @@ export default function Home({projects, experties}) {
       <Row>
         <div className={styles.hero}>
           <Col lg={2} xs={12} className="align-items-lg-end justify-content-lg-start justify-content-center  d-flex ms-lg-5"> <div className={styles.profileImage}></div></Col>
-          <Col lg={10} xs={12} className="align-items-end justify-content-start d-flex"><h2 className={styles.heroTitle} >Hi,<br /> I’m Rawa and I’m a fullstack software developer.</h2></Col>
+          <Col lg={10} xs={12} className="align-items-end justify-content-start d-flex"><h2 className={styles.heroTitle} >Hi<br /> I’m Rawa and I’m a fullstack software developer.</h2></Col>
         </div>
       </Row>
  {/* END OF HEADER SECTION */}

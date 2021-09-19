@@ -1,11 +1,11 @@
 import React from 'react'
-import { Card, Button, ListGroup, ListGroupItem } from 'react-bootstrap';
+import { Card, ListGroup, ListGroupItem } from 'react-bootstrap';
 import BootstrapCarousel from './BootstrapCarousel';
 import style from '../../styles/Home.module.css'
 
 const ProjectCard = ({projectData}) => {
 
-  const {title, devType, description, techStack, liveLink, githubLink, slug, id, images} = projectData.fields;
+  const {title, devType, description, techStack, liveLink, githubLink,  images} = projectData.fields;
 
 
 
@@ -32,7 +32,6 @@ const ProjectCard = ({projectData}) => {
     </Card.Body>
     <ListGroup className="list-group-flush">
     <ListGroupItem> {liveLink && <Card.Link href={liveLink} target="_blank">Live App</Card.Link>} <Card.Link href={githubLink} target="_blank">Github</Card.Link>
-    <Card.Link href={`/${slug}`}>Read more</Card.Link>
     </ListGroupItem>
   </ListGroup>
   </Card.Body>

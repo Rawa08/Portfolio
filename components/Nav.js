@@ -1,6 +1,6 @@
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import navStyle from '../styles/Nav.module.css'
+import navStyle from '../styles/Home.module.css'
 
 
 import React from 'react'
