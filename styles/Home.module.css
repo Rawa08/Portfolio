@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
 
 .customNavLink{
+
   color: #747474!important;
 
 }
@@ -22,7 +23,7 @@ padding: 15px 0 !important;
 .bodyContainer {
   display: flex;
   flex-direction: column;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   overflow: hidden;
 
 }
@@ -80,6 +81,18 @@ font-size: 64px;
 text-overflow: ellipsis;}
 
 
+.formButton{
+  background-color: #ffffff;
+  color: #1A1B1F;
+  border: #1A1B1F solid 1px;
+}
+
+.formButton:hover{
+  background-color: #747474;
+  color: #ffffff;
+  border: #ffffff solid 1px;
+}
+
 
 .footer {
   width: 100%;
@@ -94,30 +107,6 @@ text-overflow: ellipsis;}
 
 
 
-
-
-
-/* @media only screen and (max-width: 992px) {
-  .hero {
-    flex-direction: column;
-    margin-top: 0;
-    height: 55vh;
-  }
-
-
-
-} */
-
-
-/* @media only screen and (max-width: 380px) {
-  .hero {
-
-    height: 65vh;
-  }
-
-
-} */
-
 @media only screen and (max-width: 992px) {
   .hero {
     width: fit-content;
@@ -127,7 +116,11 @@ text-overflow: ellipsis;}
   .hero h1{
     font-size: 40px;
   }
+  .customNavLink{
+    margin: 0 auto;
 
+  
+  }
 
 }
 

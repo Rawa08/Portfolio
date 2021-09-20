@@ -4,8 +4,8 @@ import styles from '../styles/Home.module.css';
 import { Col, Row } from 'react-bootstrap';
 import Image from 'next/image';
 import ProjectCard from '../components/projects/ProjectCard'
-import Link from 'next/link'
 import { createClient } from 'contentful';
+import ContactForm from '../components/ContactForm';
 
 
 export const getStaticProps = async () => {
@@ -73,14 +73,14 @@ export default function Home({projects, experties}) {
       <div className={styles.myProject}>
       <h2>MY PROJECTS</h2>
       <Row className="d-flex justify-content-center align-items-center">
-        {projects.map(project => (<Col key={project.sys.id} lg={4} className="justify-content-center d-flex"><ProjectCard projectData={project}/></Col>))}
+        {projects.map(project => (<Col key={project.sys.id} lg={4} className="justify-content-center d-flex"><ProjectCard projectData={project} /></Col>))}
         
       </Row>
       </div>
 
-
-
-
+<Row className="d-flex justify-content-center">
+       <Col lg={8}>  <ContactForm /></Col>
+</Row>
          <footer className={styles.footer}>
 <p>My Footer</p>
       </footer>

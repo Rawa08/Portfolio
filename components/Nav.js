@@ -13,7 +13,7 @@ const CustomNav = () => {
 <Navbar bg="light" expand="lg" className={allNavClass}>
   <Container>
  
-    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+    <Navbar.Toggle aria-controls="basic-navbar-nav" className="ms-auto" />
     <Navbar.Collapse id="basic-navbar-nav"> 
       <Nav className="ms-auto">
         <Nav.Link href="#home" className={navStyle.customNavLink}>Home</Nav.Link>

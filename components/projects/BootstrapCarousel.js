@@ -1,6 +1,7 @@
 import { Carousel } from 'react-bootstrap';
 import Image from 'next/image';
-import styles from '../../styles/Home.module.css'
+import Zoom from 'react-medium-image-zoom'
+import 'react-medium-image-zoom/dist/styles.css'
 
 
 const BootstrapCarousel = ({images, bgColor}) => {
@@ -11,9 +12,9 @@ const BootstrapCarousel = ({images, bgColor}) => {
     {images.map(img => (
         
         <Carousel.Item key={img.fields.title}>
-          
+           <Zoom transitionDuration={800}>
           <Image src={`https:${img.fields.file.url}`} width={400} height={300} alt={img.fields.title} />
-
+          </Zoom>
       </Carousel.Item>
     ))
     }

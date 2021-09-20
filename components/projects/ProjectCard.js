@@ -11,7 +11,7 @@ const ProjectCard = ({projectData}) => {
 
     return (
       
-            <Card style={{ width: '25rem'}} className="mt-4 mb-4" >
+            <Card style={{ width: '25rem'}} className="mt-4 mb-4">
            
            <BootstrapCarousel images={images} bgColor={backgroundColor}/>
   <Card.Body>
@@ -23,7 +23,7 @@ const ProjectCard = ({projectData}) => {
       <Card.Body style={{ height: '10rem'}} >
 
         <ul>
-       {techStack.map(stack => ( <li>{stack}</li>))}
+       {techStack.map(stack => ( <li key={stack}>{stack}</li>))}
   
 
         </ul> 
