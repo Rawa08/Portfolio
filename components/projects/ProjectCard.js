@@ -5,15 +5,15 @@ import style from '../../styles/Home.module.css'
 
 const ProjectCard = ({projectData}) => {
 
-  const {title, devType, description, techStack, liveLink, githubLink,  images} = projectData.fields;
+  const {title, devType, description, techStack, liveLink, githubLink,  images, backgroundColor} = projectData.fields;
 
 
 
     return (
       
-            <Card style={{ width: '25rem'}} className="mt-4" >
+            <Card style={{ width: '25rem'}} className="mt-4 mb-4" >
            
-           <BootstrapCarousel images={images}/>
+           <BootstrapCarousel images={images} bgColor={backgroundColor}/>
   <Card.Body>
     <Card.Title>{title}</Card.Title>
     <Card.Subtitle className="mb-2 text-muted">{devType}</Card.Subtitle>
@@ -23,10 +23,9 @@ const ProjectCard = ({projectData}) => {
       <Card.Body style={{ height: '10rem'}} >
 
         <ul>
-        <li>{techStack[0]}</li>
-        <li>{techStack[1]}</li>
-        <li>{techStack[2]}</li>
-        <li>{techStack[3]}...</li>
+       {techStack.map(stack => ( <li>{stack}</li>))}
+  
+
         </ul> 
       
     </Card.Body>

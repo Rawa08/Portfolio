@@ -49,8 +49,8 @@ export default function Home({projects, experties}) {
  {/* HEADER SECTION */}
       <Row>
         <div className={styles.hero}>
-          <Col lg={2} xs={12} className="align-items-lg-end justify-content-lg-start justify-content-center  d-flex ms-lg-5"> <div className={styles.profileImage}></div></Col>
-          <Col lg={10} xs={12} className="align-items-end justify-content-start d-flex"><h2 className={styles.heroTitle} >Hi<br /> I’m Rawa and I’m a fullstack software developer.</h2></Col>
+          <Col lg={12} xs={12} className=""> <p>Hello and Welcome,</p></Col>
+          <Col lg={12} xs={12} className=""><h1>My name is Rawa and I’m a fullstack software developer.</h1></Col>
         </div>
       </Row>
  {/* END OF HEADER SECTION */}
@@ -77,20 +77,7 @@ export default function Home({projects, experties}) {
         
       </Row>
       </div>
-<Row>
-      <div className={styles.techStack}>
-        <h2>About Me</h2>
-        
-        <p className="text-center">I am a former account manager who acquired a strong interest in software development through hobby coding.
-        <br /> I enjoy communicating new technologies and technical concepts with my fellow team members.
-        <br />I am passionate about human interactions with digitized services...<Link href="/about">read more</Link> 
-</p>
-        
-        
-        
-        </div>
 
-        </Row>
 
 
 

@@ -1,19 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+
 .customNavLink{
-  color: #16507b !important;
-  font-weight: bold;
+  color: #747474!important;
+
 }
 
 .customNavLink:hover{
-  color: #0d6efd !important;
+  color: #1A1B1F!important;
   
 }
 
 .nav{
 transition: all 0.5s !important;
-background-color: rgba(243, 249, 253, .7) !important;
+background-color: rgba(255, 255, 255, 0.9) !important;
 z-index: 997 !important;
 padding: 15px 0 !important;
-border-bottom: 1.5px solid #e6f2fb !important;
+
 
 }
 
@@ -26,48 +28,49 @@ border-bottom: 1.5px solid #e6f2fb !important;
 }
 
 .hero {
-  max-width: 100%;
+  width: 80vw;
   height: 40vh;
-  margin-top: 10px;
+  margin: 100px auto 5px auto;
   display: flex;
-  flex-direction: row;
-  overflow: hidden;
+  flex-direction: column;
+  font-family: 'Montserrat', sans-serif;;
+  color:#1A1B1F;
   
 }
-
-.profileImage {
-  width: 200px;
-  height: 200px;
-  border-radius: 100%;
-  background: url("../public/RawaAref.jpeg") top right;
-  background-size: cover;
-
+.hero p{
+  font-size: 20px;
 }
+
+.hero h1{
+  font-size: 64px;
+  margin: 10px 0;
+  font-weight: bold;
+}
+
 
 .techStack {
   display: flex;
   flex-direction: column;
   width: 100%;
   margin: 50px auto 50px auto;
-  background-color: #f3f9fd;
-
+  background-color: #ffffff;
+  transition: padding 0.2s;
 }
 
 .techStack:hover {
-border: #124265 solid 1px;
+  padding: 10px;
 }
 
 .techStack h2,
 .myProject h2 {
   text-align: center;
   margin: 50px 0;
-  color: #124265;
-  font-family: "Raleway", sans-serif;
-  text-shadow: 1px 1px #124265;
+  font-family: 'Montserrat', sans-serif;
+  color:#1A1B1F;
+font-weight: bold;
+font-size: 64px;
 
 }
-
-
 
 
 .ellipsis{
@@ -75,9 +78,6 @@ border: #124265 solid 1px;
   white-space: nowrap;
   overflow: hidden;
 text-overflow: ellipsis;}
-
-
-
 
 
 
@@ -93,85 +93,41 @@ text-overflow: ellipsis;}
 
 
 
-@media only screen and (min-width: 992px) {
-  .heroTitle {
-    color: #124265;
-    text-align: center;
-    font-family: "Raleway", sans-serif;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: 0.15em solid #124265; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: 0.15em; /* Adjust as needed */
-    animation: typing 3.5s steps(30, end), blink-caret 0.75s step-end infinite;
-  }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 100%;
-    }
-  }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from,
-    to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: #124265;
-    }
-  }
-  
-}
 
 
 
 
-@media only screen and (max-width: 992px) {
+/* @media only screen and (max-width: 992px) {
   .hero {
     flex-direction: column;
     margin-top: 0;
     height: 55vh;
   }
-  .profileImage {
-    margin-top: 80px;
-  }
-
-  .heroTitle {
-    color: #124265;
-    text-align: center;
-    font-family: "Raleway", sans-serif;
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    white-space:normal;
-    font-size: 30px;
-    
-
-    }
 
 
-}
-@media only screen and (max-width: 380px) {
+
+} */
+
+
+/* @media only screen and (max-width: 380px) {
   .hero {
 
     height: 65vh;
   }
 
 
-}
+} */
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 992px) {
   .hero {
-    flex-direction: column;
-    margin-top:0;
-    height: 85vh;
+    width: fit-content;
+    height: fit-content;
+    margin-left:10px;
   }
-  .profileImage {
-    margin-top: 80px;
+  .hero h1{
+    font-size: 40px;
   }
 
+
 }
+
