@@ -80,6 +80,14 @@ font-size: 64px;
   overflow: hidden;
 text-overflow: ellipsis;}
 
+/* Contact Page */
+
+.contactHeader{
+  text-align: center;
+  color: #1A1B1F;
+  font-weight: bold;
+font-size: 40px;
+}
 
 .formButton{
   background-color: #ffffff;
@@ -93,6 +101,14 @@ text-overflow: ellipsis;}
   border: #ffffff solid 1px;
 }
 
+.feedback {
+  text-align: center;
+
+  font-family: 'Montserrat', sans-serif;
+  color:#1A1B1F;
+font-weight: bold;
+font-size: 40px;
+}
 
 .footer {
   width: 100%;
