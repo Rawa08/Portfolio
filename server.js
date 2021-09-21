@@ -1,6 +1,6 @@
 const express = require('express');
 const next = require('next');
-
+const mailer = require('./mailConfig');
 
 const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
@@ -25,7 +25,18 @@ app.prepare().then(() => {
   })
 
   server.post('/api/contact', (req, res) => {
-    const {fromMail, subject1, message1 } = req.body
+    const {fromMail, subject1, message1 } = req.body;
+
+
+    mailer({ fromMail, subject1, message1 }).then(() => {
+      console.log('success')
+  
+    }).catch((error) => {
+      console.log('failed', error)
+ 
+    })
+
+
     console.log(req.body)
     res.send('success')
   })
