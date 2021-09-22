@@ -32,32 +32,35 @@ app.prepare().then(() => {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   server.post('/api/contact', (req, res) => {
-    const {
-      fromMail,
-      subject,
-      message
-    } = req.body;
 
+
+
+    const sgMail = require('@sendgrid/mail');
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
     const msg = {
       to: process.env.toMail, // Change to your recipient
-      from: fromMail, // Change to your verified sender
-      subject: subject,
-      text: message,
-
-    }
-
-
+      from: process.env.senderMail, // Change to your verified sender
+      subject: `Mail from rawa.se - ${req.body.subject}`,
+      text: req.body.message,
+      html: `<strong>Från ${req.body.fromMail}'</strong> <br /> <p>${req.body.message}</p>`
+    };
+    //ES6
     sgMail
-      .send(msg)
-      .then(() => {
-        res.send('success')
-      })
-      .catch((error) => {
-        res.status(500).send('error')
-        console.error(error)
-      
-      })
-
-
-  })
+    .send(msg)
+    .then(() => {
+      res.send('success')
+      console.log('Email Sent!');
+    })
+    .catch(error => {
+      res.status(500)
+      //Log friendly error
+      console.error(error.toString());
+  
+      //Extract error msg
+      const {message, code, response} = error;
+  
+      //Extract response msg
+      const {headers, body} = response;
+    });
+ })
 })

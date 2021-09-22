@@ -19,8 +19,8 @@ const ContactForm = () => {
       },
       body: JSON.stringify({
         fromMail: from,
-        subject1: subject,
-        message1: text
+        subject: subject,
+        message: text
       })
     }).then((res) => {
       console.log(res.status)
