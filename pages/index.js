@@ -1,14 +1,17 @@
 
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { Col, Row } from 'react-bootstrap';
+import { Col, Row, Button } from 'react-bootstrap';
 import Image from 'next/image';
 import ProjectCard from '../components/projects/ProjectCard'
 import { createClient } from 'contentful';
 
 
 
+
 export const getStaticProps = async () => {
+
+
   const client = createClient({
     space: process.env.contentful_space,
     accessToken: process.env.contentful_secret
@@ -62,21 +65,14 @@ export default function Home({projects, experties}) {
 
       <div className={styles.myProject}>
       <h2>MY PROJECTS</h2>
-      {/* <Row className="d-flex justify-content-center align-items-center">
+      <Row className="d-flex justify-content-center align-items-center">
         {projects.map(project => (<Col key={project.sys.id} lg={4} className="justify-content-center d-flex"><ProjectCard projectData={project} /></Col>))}
-        
-      </Row> */}
-
-<Row className="d-flex justify-content-center align-items-center">
-        <Col key={projects[0].sys.id} lg={4} className="justify-content-center d-flex"><ProjectCard projectData={projects[0]} /></Col>
         
       </Row>
       </div>
 
 
-         <footer className={styles.footer}>
-<p>My Footer</p>
-      </footer>
+
     </div>
   )
 }

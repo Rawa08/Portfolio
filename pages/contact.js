@@ -33,9 +33,7 @@ export default function Contact() {
          <Col lg={12}><p className={styles.contactHeader}>Let&apos;s get in touch</p></Col>
        <Col lg={8}>  <ContactForm /></Col>
 </Row>
-         <footer className={styles.footer}>
-<p>My Footer</p>
-      </footer>
+
     </div>
   )
 }
