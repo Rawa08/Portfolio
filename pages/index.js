@@ -29,13 +29,6 @@ export const getStaticProps = async () => {
 
 export default function Home({projects, experties}) {
 
-  
-  experties.map(item => {
-    if (typeof item.fields.image !== 'undefined'){
-    return item.imageLink='https:' + item.fields.image.fields.file.url}
-  })
-
-
 
   return (
     <div className={styles.bodyContainer}>
@@ -59,11 +52,8 @@ export default function Home({projects, experties}) {
       <div className={styles.techStack}>
         <h2>Expertise</h2>
         <Row className="justify-content-center mx-auto">
-         {experties.map(item => {
-          if(item.imageLink){
-            return (<Col lg={2} md={4} xs={4} key={item.sys.id} className="text-center"><Image src={item.imageLink} width={item.fields.width} height={item.fields.height} className={styles.techLogo} alt={item.fields.alt} /> </Col>)
-          }
-         })}
+         {experties.map(item =>  (<Col lg={2} md={4} xs={4} key={item.sys.id} className="text-center"><Image src={`https:${item.fields.image.fields.file.url}`} width={item.fields.width} height={item.fields.height} className={styles.techLogo} alt={item.fields.alt} /> </Col>)
+          )}
 
         </Row>
       </div>
@@ -72,8 +62,13 @@ export default function Home({projects, experties}) {
 
       <div className={styles.myProject}>
       <h2>MY PROJECTS</h2>
-      <Row className="d-flex justify-content-center align-items-center">
+      {/* <Row className="d-flex justify-content-center align-items-center">
         {projects.map(project => (<Col key={project.sys.id} lg={4} className="justify-content-center d-flex"><ProjectCard projectData={project} /></Col>))}
+        
+      </Row> */}
+
+<Row className="d-flex justify-content-center align-items-center">
+        <Col key={projects[0].sys.id} lg={4} className="justify-content-center d-flex"><ProjectCard projectData={projects[0]} /></Col>
         
       </Row>
       </div>
