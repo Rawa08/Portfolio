@@ -7,20 +7,26 @@ import emailjs from 'emailjs-com';
 
 const ContactForm = () => {
 
-  const [feedback, setFeedback] = useState({ success: false, text: '', alertVariant: '',notSuccess:false });
+  const [feedback, setFeedback] = useState({ success: false, text: '', alertVariant: '', notSuccess: false });
 
 
   const submitForm = (e) => {
     e.preventDefault();
+    emailjs.sendForm(process.env.NEXT_PUBLIC_service_id, process.env.NEXT_PUBLIC_template_id, e.target, process.env.NEXT_PUBLIC_user_id)
 
-    emailjs.sendForm('service_vgumcc9','template_qvnrocc', e.target, 'user_bmodrfQbdflZTqZbhG5xt')
       .then((result) => {
-        setFeedback({ success: true ,text: 'Your message have been sent, i will get back to you asap', alertVariant: 'info' })
-          console.log(result.text);
+        if (result.status === 200) {
+          setFeedback({ success: true, text: 'Your message have been sent, i will get back to you asap', alertVariant: 'info' })
+          e.target.reset()
+        }
+        else {
+          setFeedback({ success: false, text: 'Something went wrong please try again', alertVariant: 'danger', notSuccess: true })
+        }
+        console.log(result);
       }, (error) => {
-        setFeedback({ success: false, text: 'Something went wrong please try again', alertVariant: 'danger' , notSuccess:true})
+
       });
-      e.target.reset()
+    
   }
 
 
@@ -36,7 +42,7 @@ const ContactForm = () => {
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Your email:</Form.Label>
           <Form.Control type="email" name="email" required />
-         
+
 
         </Form.Group>
 
@@ -54,12 +60,12 @@ const ContactForm = () => {
           Submit
         </Button>
       </Form>}
-      {feedback.notSuccess &&       <Alert variant={feedback.alertVariant}>
+      {feedback.notSuccess && <Alert variant={feedback.alertVariant}>
         <p className={styles.feedback
         }>{feedback.text}</p>
       </Alert>}
 
-      </>
+    </>
   )
 }
 

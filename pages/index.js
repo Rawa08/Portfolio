@@ -49,8 +49,8 @@ export default function Home({projects, experties}) {
  {/* HEADER SECTION */}
       <Row>
         <div className={styles.hero}>
-          <Col lg={12} xs={12} className=""> <p>Hello and Welcome</p></Col>
-          <Col lg={12} xs={12} className=""><h1>My name is Rawa and I’m a fullstack software developer.</h1></Col>
+          <Col lg={12} xs={12}> <p>Hello and Welcome</p></Col>
+          <Col lg={12} xs={12}><h1>My name is Rawa and I’m a fullstack software developer.</h1></Col>
         </div>
       </Row>
  {/* END OF HEADER SECTION */}
