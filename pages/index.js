@@ -1,13 +1,11 @@
 
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { Col, Row, Button} from 'react-bootstrap';
+import { Col, Row} from 'react-bootstrap';
 import Image from 'next/image';
 import ProjectCard from '../components/projects/ProjectCard'
 import { createClient } from 'contentful';
-import githubLogo from '../public/github.png'
-import linkedin from '../public/linkedin.png'
-import Link from 'next/link';
+
 
 
 
@@ -45,12 +43,6 @@ export default function Home({projects, experties}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Row>
- <div className={styles.hero}>
-  <Col lg={12} xs={12}> <p>Hello and Welcome</p></Col>
-   <Col lg={12} xs={12}><h1>My name is Rawa and I’m a <br />Full-stack software developer.</h1></Col>
- </div>
-</Row>
 
 {/* STACK SECTION */}
       <div className={styles.techStack}>
@@ -72,12 +64,7 @@ export default function Home({projects, experties}) {
       </Row>
       </div>
 
-      <footer className={styles.footer}>
-        <a href="https://www.linkedin.com/in/rawaaref" target="_blank" className="mx-2" rel="noreferrer"><Image src={linkedin} alt="Linkedin logo" width={30} height={25} /></a>
-        <a href="https://github.com/rawa08" target="_blank" className="mx-2" rel="noreferrer"><Image src={githubLogo} alt="github logo" width={25} height={25} /></a>
-        <Link href="/contact" passHref><Button className={styles.footerButton}>Contact</Button></Link>
-        
-     </footer>
+
 
     </div>
   )
