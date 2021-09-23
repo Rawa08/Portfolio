@@ -16,18 +16,6 @@ export default function Contact() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
- {/* HEADER SECTION */}
-      <Row>
-        <div className={styles.hero}>
-          <Col lg={12} xs={12} className=""> <p>Hello and Welcome</p></Col>
-          <Col lg={12} xs={12} className=""><h1>My name is Rawa and I’m a fullstack software developer.</h1></Col>
-        </div>
-      </Row>
- {/* END OF HEADER SECTION */}
-
-
-
-
 
 <Row className="d-flex justify-content-center mt-5">
          <Col lg={12}><p className={styles.contactHeader}>Let&apos;s get in touch</p></Col>

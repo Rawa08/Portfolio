@@ -31,7 +31,7 @@ padding: 15px 0 !important;
 .hero {
   width: 80vw;
   height: 40vh;
-  margin: 70px auto 5px auto;
+  margin: 70px 0 0 50px;
   display: flex;
   flex-direction: column;
   font-family: 'Montserrat', sans-serif;;
@@ -116,12 +116,26 @@ font-size: 40px;
   border-top: 1px solid #eaeaea;
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 20px;
 }
 
 
 
+.footerButton{
+  background-color: #ffffff;
+  color: #1A1B1F;
+  border:none;
+  box-shadow: none;
+}
 
+.footerButton:hover,
+.footerButton:focus,
+.footerButton:active{
+  background-color: #1A1B1F;
+  color: #ffffff;
+  box-shadow: none;
+}
 
 @media only screen and (max-width: 992px) {
   .hero {

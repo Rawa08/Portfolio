@@ -1,7 +1,7 @@
 
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
-import { Col, Row, Button } from 'react-bootstrap';
+import { Col, Row} from 'react-bootstrap';
 import Image from 'next/image';
 import ProjectCard from '../components/projects/ProjectCard'
 import { createClient } from 'contentful';
@@ -42,14 +42,7 @@ export default function Home({projects, experties}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
- {/* HEADER SECTION */}
-      <Row>
-        <div className={styles.hero}>
-          <Col lg={12} xs={12}> <p>Hello and Welcome</p></Col>
-          <Col lg={12} xs={12}><h1>My name is Rawa and I’m a fullstack software developer.</h1></Col>
-        </div>
-      </Row>
- {/* END OF HEADER SECTION */}
+
 
 {/* STACK SECTION */}
       <div className={styles.techStack}>
