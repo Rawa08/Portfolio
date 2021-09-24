@@ -9,14 +9,12 @@ const BootstrapCarousel = ({images, bgColor}) => {
 
     return (
 <Carousel variant="dark" className="p-2 rounded-top" style={{backgroundColor: bgColor}}>
-    {images.map(img => (
-        
-        <Carousel.Item key={img.fields.title}>
+    {images.map(img =>  (<Carousel.Item key={img.fields.title}>
            <Zoom transitionDuration={800}>
           <Image src={`https:${img.fields.file.url}`} width={400} height={300} alt={img.fields.title} />
           </Zoom>
-      </Carousel.Item>
-    ))
+      </Carousel.Item>)
+)
     }
   
 </Carousel>
