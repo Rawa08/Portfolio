@@ -7,7 +7,7 @@ import Link from 'next/link';
 import { createClient } from 'contentful';
 
 
-
+export const config = { unstable_runtimeJS: false}
 
 
 export const getStaticProps = async () => {
