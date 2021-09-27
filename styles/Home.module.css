@@ -1,17 +1,31 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap');
+
+@font-face {
+  font-family: "Morganite";
+  src: url("/fonts/Morganite-Black.ttf");
+  font-style: bold;
+  font-weight: 700;
+  font-display: swap;
+}
 
 .customNavLink{
 
   color: #747474!important;
+  font-size:20px;
+  font-weight:bold;
 
 }
 
 .customNavLink:hover{
   color: #1A1B1F!important;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
   
 }
 
 .nav{
+font-family: 'Montserrat', sans-serif;
 transition: all 0.5s !important;
 background-color: rgba(255, 255, 255, 0.9) !important;
 z-index: 997 !important;
@@ -31,21 +45,26 @@ padding: 15px 0 !important;
 .hero {
   width: 80vw;
   height: 40vh;
-  margin: 70px 0 0 50px;
+  margin: 80px 0 0 50px;
   display: flex;
   flex-direction: column;
-  font-family: 'Montserrat', sans-serif;;
   color:#1A1B1F;
+
   
 }
 .hero p{
-  font-size: 20px;
+  font-size: 40px;
+  font-family: 'Roboto', sans-serif;
+
+
 }
 
 .hero h1{
-  font-size: 60px;
-  margin: 5px 0;
-  font-weight: bolder;
+
+  font-family: 'Morganite',sans-serif;
+  font-size:110px;
+  margin-top:0;
+
 }
 
 
@@ -62,14 +81,14 @@ padding: 15px 0 !important;
 
 .myProject {
   padding: 0 50px;
-  margin: 10px 0;
+  margin: 10px 0 50px 0;
 }
 .projectLink,
 .techStack h2,
 .myProject h2 {
 
   margin: 50px 0;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Morganite', sans-serif;
   color:#1A1B1F;
 font-weight: bold;
 font-size: 64px;
@@ -77,8 +96,11 @@ text-decoration: none;
 }
 
 .projectLink:hover{
-color:#747474}
+color:red}
 
+.projectLinkMobile{
+  display: none;
+}
 
 .ellipsis{
   
@@ -147,16 +169,19 @@ font-size: 40px;
   .hero {
     width: fit-content;
     height: fit-content;
-    margin-left:10px;
+   
   }
   .hero h1{
-    font-size: 40px;
+    font-size: 80px;
   }
   .customNavLink{
-    margin: 0 auto;
+    margin: 0 auto;  
+  }
 
-  
+  .projectLinkMobile{
+    display: block;
+    font-family:'Montserrat', sans-serif;
+    font-size:20px;
   }
 
 }
-

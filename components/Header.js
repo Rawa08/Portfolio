@@ -8,7 +8,8 @@ const Header = () => {
  <Row>
  <div className={styles.hero}>
   <Col lg={12} xs={12}> <p>Hello and Welcome</p></Col>
-   <Col lg={12} xs={12}><h1>My name is Rawa and I’m a <br />Full-stack software developer.</h1></Col>
+
+   <Col lg={12} xs={12}><h1>I’M RAWA. <br />FULL STACK SOFTWARE DEVELOPER FROM STOCKHOLM</h1></Col>
  </div>
 </Row>
 
