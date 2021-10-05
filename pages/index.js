@@ -34,9 +34,10 @@ export default function Home({ experties }) {
   return (
     <div className={styles.bodyContainer}>
       <Head>
+      <meta name="robots" content="index, follow"></meta>
         <title>Rawa DEV</title>
-        <meta name="description" content="Fullstack web developer" />
-        <meta name="description" content="Fullstack Software developer" />
+        <meta name="description" content="Hi! My name is Rawa Aref and I'm a full stack software developer from Stockholm"></meta>
+        
         <link rel="icon" href="/favicon.ico" />
 
       </Head>
@@ -55,8 +56,8 @@ export default function Home({ experties }) {
 
      
       <div className={styles.myProject}>
-        <Link href="/projects"><a className={styles.projectLink}>MY PROJECTS</a></Link>
-        <Link href="/projects"><p className={styles.projectLinkMobile}>Go to Projects &#8594;</p></Link>
+        <Link href="/projects" passHref><a className={styles.projectLink}>MY PROJECTS</a></Link>
+        <Link href="/projects" passHref><p className={styles.projectLinkMobile}>Go to Projects &#8594;</p></Link>
         <Row className="d-flex justify-content-center align-items-center">
         
          <Col lg={4} md={4} xs={6}><Image src={'https://images.ctfassets.net/9epw4a4fl2u6/6LFzBlI1yDJ14H0PF3n1C5/ce39e935f7e53c2ae60b48e24d514b26/myF-Desktop.png'} width={400} height={300} alt="Project Icon" /></Col>
