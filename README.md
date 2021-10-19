@@ -1,8 +1,17 @@
-## My Portfolio as a Software Developer    
-### I'm still working on this Project, When it's complete i will deploy it on www.rawa.se/
+## My Portfolio
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+- Rawa Dev at [rawa.se](https://www.rawa.se)  
 
-[Test Site](https://portfolio-self-omega-19.vercel.app/)
+<br />
 
+<img  alt="Desktop view www.rawa.se" width="350px" src="https://github.com/Rawa08/Rawa08/raw/main/media/desktop.png" />&nbsp;&nbsp;<img  alt="Mobile view www.rawa.se" width="80px" src="https://github.com/Rawa08/Rawa08/raw/main/media/mobile.png" />  
+<br /><br /><br />
 
+# Technologies
+- [React with NEXT.JS](https://nextjs.org/)
+- [Contentful for content managment](https://www.contentful.com/)
+- [Email JS](https://www.emailjs.com/)   
+<br /><br /><br />
+
+# Deployment
+This application is deployed on [https://vercel.com/](https://vercel.com/)
