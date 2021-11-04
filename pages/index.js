@@ -35,7 +35,7 @@ export default function Home({ experties }) {
     <div className={styles.bodyContainer}>
       <Head>
       <meta name="robots" content="index, follow"></meta>
-        <title>Rawa DEV</title>
+        <title>Rawa Aref</title>
         <meta name="description" content="Hi! My name is Rawa Aref and I'm a full stack software developer from Stockholm"></meta>
         
         <link rel="icon" href="/favicon.ico" />

@@ -36,10 +36,12 @@ export default function Projects({ projects}) {
   return (
     <div className={styles.bodyContainer}>
       <Head>
-        <title>Rawa DEV</title>
-        <meta name="description" content="Fullstack web developer" />
-        <meta name="description" content="Fullstack Software developer" />
+      <meta name="robots" content="projects, follow"></meta>
+        <title>Rawa Aref</title>
+        <meta name="description" content="Hi! My name is Rawa Aref and I'm a full stack software developer from Stockholm"></meta>
+        
         <link rel="icon" href="/favicon.ico" />
+
       </Head>
 
 
